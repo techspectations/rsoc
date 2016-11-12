@@ -54,7 +54,7 @@ public class PieActivity extends AppCompatActivity {
     };
     private SpannableString generateCenterSpannableText()
     {
-        SpannableString localSpannableString = new SpannableString("I-NEWS");
+        SpannableString localSpannableString = new SpannableString("REPORTER");
         localSpannableString.setSpan(new RelativeSizeSpan(1.7F), 0, 13, 0);
         localSpannableString.setSpan(new StyleSpan(0), 0, 13, 0);
 
@@ -109,8 +109,8 @@ public class PieActivity extends AppCompatActivity {
                 // display msg when value selected
                 if (e == null)
                     return;
-                if (xValues[e.getXIndex()].equals("UG EVENTS")){
-                    Intent i = new Intent(PieActivity.this,MainActivity.class);
+                if (xValues[e.getXIndex()].equals("AROUND YOU")){
+                    Intent i = new Intent(PieActivity.this,Main2Activity.class);
 
                     startActivity(i);
                 }

@@ -7,28 +7,28 @@ import android.os.Bundle;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
-public class MainActivity extends Activity {
+public class Main2Activity extends Activity {
     WebView w;
     ProgressDialog mProgressDialog;
     String s;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main2);
 
-        w=(WebView)findViewById(R.id.web);
+        w=(WebView)findViewById(R.id.web1);
         w.setWebViewClient(new MyBrowser());
         w.getSettings().setLoadsImagesAutomatically(true);
         w.getSettings().setJavaScriptEnabled(true);
         s="<html>\n" +
                 "<title> imap </title>\n" +
                 "<body>\n" +
-                "<iframe src=\"http://192.168.43.51/hackapp/index.php\" width=\"800\" height=\"500\" frameborder=\"0\" style=\"border:0\" allowfullscreen></iframe>\n" +
+                "<iframe src=\"http://192.168.43.51/hackapp/all.php\" width=\"800\" height=\"500\" frameborder=\"0\" style=\"border:0\" allowfullscreen></iframe>\n" +
                 "</body>\n" +
                 "</html> ";
 
         //w.loadUrl("file:///android_asset/imap.html");
-        mProgressDialog = new ProgressDialog(MainActivity.this);
+        mProgressDialog = new ProgressDialog(Main2Activity.this);
         mProgressDialog.setTitle("Get to saintgits");
         mProgressDialog.setMessage("...Loading...");
         mProgressDialog.setIndeterminate(false);
